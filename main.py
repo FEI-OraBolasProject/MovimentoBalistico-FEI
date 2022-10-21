@@ -108,11 +108,26 @@ def dados_tempoEscolhido(tempo, g, h0, hf, vx0, vy0):
 
 #Dados de entrada!
 g = -9.8
-v0 = float(input("Velocidade inicial: "))
-angulo = radians(float(input("Angulo inicial: ")))
-tempo = float(input("Tempo inicial: "))
-h0 = float(input("Altura inicial: "))
-hf = float(input("Altura final: "))
+
+unidade_vel = int(input("A velocidade está em qual unidade: \n1 - km/h \n2-m/s\n"))
+if unidade_vel == 1:
+    v0 = float(input("Velocidade inicial em km/h: "))
+    v0 = v0/3.6 #converter para m/s
+else:
+    v0 = float(input("Velocidade inicial em m/s: "))
+
+unidade_ang = int(input("O ângulo está em qual unidade: \n1-graus \n2-radianos"))
+if unidade_ang==1:
+    #É necessário converter para radianos
+    angulo = radians(float(input("Angulo inicial em graus: ")))
+else:
+    angulo = float(input("Angulo inicial em radianos: "))
+
+
+tempo = float(input("Tempo inicial em segundos: "))
+h0 = float(input("Altura inicial em metros: "))
+hf = float(input("Altura final em metros: "))
+
 vx0 = v0 * cos(angulo)
 vy0 = v0 * sin(angulo)
 
