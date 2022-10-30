@@ -1,3 +1,4 @@
+
 #Importando a biblioteca "math" para usar funções de matemática
 from math import *
 
@@ -8,7 +9,7 @@ def tempoAr(g,vy0,h0,hf):
     a = g/2
     b = vy0
     c = (h0 - hf)
-    delta = (b**2) - (4 * a *c)
+    delta = ((b**2) - (4 * a *c))
     t1 = (sqrt(delta) - b) / (2*a)
     t2 = (-b - sqrt(delta)) / (2*a)
 
